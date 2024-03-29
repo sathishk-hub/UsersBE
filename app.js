@@ -25,7 +25,8 @@ const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 mongoose.connect(dbConfig.url, {
     useNewUrlParser: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
+    dbName:'coffeday'
 
 }).then(() => {
     console.log("Database Connected Successfully!!");    
