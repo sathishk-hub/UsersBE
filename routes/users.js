@@ -7,7 +7,7 @@ const userHelper = require('../database/userHelper.js');
 router.get('/', async function (req, res, next) {
   try {
 
-    const user = await userHelper.getUserDetail(req.body.email)
+    const user = await userHelper.getUserDetail(req.query.email || req.body.email)
     res.status(200).json(user);
 
   } catch (err) {
